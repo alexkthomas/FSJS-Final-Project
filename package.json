@@ -1,14 +1,27 @@
 {
-  "name": "calorieapp",
+  "name": "fsjs-class-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "## Install NodeJS",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
-  }
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.7",
+    "nodemon": "^1.17.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeLouisville/FSJS-class-project.git"
+  },
+  "author": "Aaron Johnson <aarontropy@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeLouisville/FSJS-class-project/issues"
+  },
+  "homepage": "https://github.com/CodeLouisville/FSJS-class-project#readme"
 }
