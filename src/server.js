@@ -9,13 +9,6 @@ const router = require('./routes');
 // Load mongoose package
 const mongoose = require('mongoose');
 
-const FileSchema = new mongoose.Schema({
-  title: String,
-  description: String,
-  created_at: { type: Date, default: Date.now },
-  deleted: {type: Boolean, default: false}
-});
-
 // Connect to MongoDB and create/use database as configured
 mongoose.connection.openUri(`mongodb://${config.db.username}:${config.db.password}@${config.db.host}/${config.db.dbName}`);
 

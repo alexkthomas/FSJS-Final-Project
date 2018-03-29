@@ -40,10 +40,12 @@ function submitFileForm() {
   console.log("You clicked 'submit'. Congratulations.");
 
   const fileData = {
-    title: $('#file-title').val(),
-    description: $('#file-description').val(),
-    _id: $('#file-id').val(),
-  };
+   name: $('#name').val(),
+   calories: $('#calories').val(),
+   carbs: $('#carbs').val(),
+   meal_type: $('input[name=meal_type]:checked').val(),
+   _id: $('#meal-id').val(),
+ };
 
   let method, url;
   if (fileData._id) {

@@ -2,8 +2,10 @@
 const mongoose = require('mongoose');
 
 const FileSchema = new mongoose.Schema({
-  title: String,
-  description: String,
+  name: String,
+  calories: String,
+  carbs: String,
+  meal_type: String, 
   created_at: { type: Date, default: Date.now },
   deleted: {type: Boolean, default: false}
 });
