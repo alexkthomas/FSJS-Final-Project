@@ -1,0 +1,6 @@
+[
+  {"name": "banana", "calories": "45", "carbs": "11", "deleted": false},
+  {"name": "ham sandwich", "calories": "360", "carbs": "40", "deleted": false},
+  {"name": "coffee", "calories": "5", "carbs": "0", "deleted": false},
+  {"name": "bagel", "calories": "400", "carbs": "100", "deleted": false},
+]
