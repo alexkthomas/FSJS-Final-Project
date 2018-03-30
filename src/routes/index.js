@@ -55,7 +55,7 @@ router.post('/file', function(req, res, next) {
     name: req.body.name,
     calories: req.body.calories,
     carbs: req.body.carbs,
-  };
+      };
   console.log(req.body)
 
   File.create(fileData, function(err, newFile) {

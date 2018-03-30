@@ -3,13 +3,13 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+/*main body styes*/
 body {
   font-family: 'Sarala';
   color: #384047;
   background-color: Yellow;
 }
-
+/*Form style*/
 form {
   max-width: 300px;
   margin: 10px auto;
@@ -40,7 +40,7 @@ select {
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   margin-bottom: 30px;
 }
-
+/*css radio checkbox style*/
 input[type="radio"],
 input[type="checkbox"] {
   margin: 0 4px 8px 0;
@@ -51,7 +51,7 @@ select {
   height: 32px;
   border-radius: 2px;
 }
-
+/*CSS that styles our buttons*/
 input[type="button"] {
   padding: 19px 39px 18px 39px;
   color: #FFF;

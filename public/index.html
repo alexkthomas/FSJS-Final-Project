@@ -7,10 +7,12 @@
         <title>My Calorie App</title>
         <link rel="stylesheet" type="text/css" href="normalize.css">
       <link href="https://fonts.googleapis.com/css?family=Sarala" type="text/css" rel="stylesheet">
+      <!-- linking css style sheet to html -->
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
       <body>
          <div id="list-container"></div>
+         <!-- this is where the form starts -->
       <div>
         <form id="add-file-form">
         <h1>My Calorie App</h1>
@@ -34,10 +36,11 @@
 
 
        <input type="hidden" id="meal-id" value="" />
+       <!-- Submit your food -->
        <input type="button" onclick='submitFileForm()' class="btn btn-success" value="Submit"></input>
 <input type="button" onclick='submitFileForm()' class="btn btn-success" value="Edit Meal"></input>
 <input type="button" onclick='submitFileForm()' class="btn btn-success" value="Delete"></input>
-      
+
 
       </form>
 </div>
@@ -48,13 +51,16 @@
         <li class="list-group-item">
           <strong>{{name}}</strong> - {{calories}} - {{carbs}} {{meal-type}}
           <span class="pull-right">
+            <!-- push to edit your meal, then hit submit again -->
             <button type="button" class="btn btn-xs btn-default" onclick="handleEditFileClick('{{_id}}')">Edit</button>
+            <!-- push to delete, then press ok  -->
             <button type="button" class="btn btn-xs btn-danger" onclick="handleDeleteFileClick('{{_id}}')">Del</button>
           </span>
         </li>
         {{/each}}
       </ul>
 </script>
+<!-- scripts linking in jquery library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
  <script src="app.js"></script>

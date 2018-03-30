@@ -35,7 +35,7 @@ function handleAddFileClick() {
 function toggleAddFileFormVisibility() {
   $('#form-container').toggleClass('hidden');
 }
-
+// javascript function that submits the file form data
 function submitFileForm() {
   console.log("You clicked 'submit'. Congratulations.");
 
@@ -78,7 +78,7 @@ function submitFileForm() {
 function cancelFileForm() {
   toggleAddFileFormVisibility();
 }
-
+// java script that allows you to edit the file form
 function handleEditFileClick(id) {
   const file = window.fileList.find(file => file._id === id);
   if (file) {
@@ -98,10 +98,10 @@ function setFormData(data) {
     _id: data._id || '',
   };
 
-  $('#name').val(file.title);
-  $('#calories').val(file.description);
-  $('carbs').val(file.description);
-  $('#file-id').val(file._id);
+  $('#name').val(file.name);
+  $('#calories').val(file.calories);
+  $('#carbs').val(file.carbs);
+  $('#meal-id').val(file._id);
 }
 
 function handleDeleteFileClick(id) {
@@ -109,7 +109,7 @@ function handleDeleteFileClick(id) {
     deleteFile(id);
   }
 }
-
+// javascript function that allows us to delete
 function deleteFile(id) {
   $.ajax({
     type: 'DELETE',
