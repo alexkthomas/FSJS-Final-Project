@@ -52,9 +52,11 @@ router.get('/file/:fileId', function(req, res, next) {
 router.post('/file', function(req, res, next) {
   const File = mongoose.model('File');
   const fileData = {
-    title: req.body.title,
-    description: req.body.description,
+    name: req.body.name,
+    calories: req.body.calories,
+    carbs: req.body.carbs,
   };
+  console.log(req.body)
 
   File.create(fileData, function(err, newFile) {
     if (err) {
@@ -82,8 +84,9 @@ router.put('/file/:fileId', function(req, res, next) {
       return res.status(404).json({message: "File not found"});
     }
 
-    file.title = req.body.title;
-    file.description = req.body.description;
+    file.name = req.body.name;
+    file.calories = req.body.calories;
+    file.carbs = req.body.carbs;
 
     file.save(function(err, savedFile) {
       if (err) {
