@@ -92,13 +92,15 @@ function setFormData(data) {
   data = data || {};
 
   const file = {
-    title: data.title || '',
-    description: data.description || '',
+    name: data.name || '',
+    calories: data.calories || '',
+    carbs: data.carbs|| '',
     _id: data._id || '',
   };
 
-  $('#file-title').val(file.title);
-  $('#file-description').val(file.description);
+  $('#name').val(file.title);
+  $('#calories').val(file.description);
+  $('carbs').val(file.description);
   $('#file-id').val(file._id);
 }
 
