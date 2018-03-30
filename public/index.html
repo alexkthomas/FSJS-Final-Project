@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
       <body>
-         <div class="list-container"></div>
+         <div id="list-container"></div>
       <div>
         <form id="add-file-form">
         <h1>My Calorie App</h1>
@@ -43,6 +43,19 @@
 
       </form>
 </div>
-
+<!-- display the items -->
+<script id="list-template" type="text/x-handlebars-template">
+      <ul class="list-group">
+        {{#each files}}
+        <li class="list-group-item">
+          <strong>{{name}}</strong> - {{calories}} - {{carbs}} {{meal-type}}
+          <span class="pull-right">
+            <button type="button" class="btn btn-xs btn-default" onclick="handleEditFileClick('{{_id}}')">Edit</button>
+            <button type="button" class="btn btn-xs btn-danger" onclick="handleDeleteFileClick('{{_id}}')">Del</button>
+          </span>
+        </li>
+        {{/each}}
+      </ul>
+</script>
     </body>
 </html>
